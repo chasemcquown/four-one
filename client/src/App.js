@@ -1,23 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Nav from './components/nav';
+import Home from './pages/home';
+// import ContactForm from './pages/contact';
+// import Resume from './pages/resume';
+// import Portfolio from './pages/portfolio'
+// import Certs from './pages/certifications'
+// import DigitalArt from './pages/digital-art'
+
+
+// icons
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+library.add(fab)
 
 function App() {
+
+  // const [currentPage, handlePageChange] = useState('About');
+
+  // const renderPage = () => {
+  //   // Add a switch statement that will return the appropriate component of the 'currentPage'
+  //   // YOUR CODE HERE
+  //   switch(currentPage){
+  //     case "Home":
+  //       return <Home/>
+  //     // case "DigitalArt":
+  //     //   return <DigitalArt/>
+  //     // case "Resume": 
+  //     //   return <Resume/>
+  //     // case "Certs":
+  //     //   return <Certs/>
+  //     // case "Portfolio":
+  //     //   return <Portfolio/>
+  //     default: 
+  //       return <Home/>
+  //   }
+  // };
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          yoo
-        </a>
-      </header>
+    <div>
+      <Nav
+        // currentPage={currentPage} handlePageChange={handlePageChange}
+      ></Nav>
+      <main>
+        {/* {
+          // Render the component returned by 'renderPage()'
+          renderPage(currentPage)
+        } */}
+      </main>
     </div>
   );
 }
